@@ -34,3 +34,5 @@
 - [Вывод версии mpcode](examples/mpcode/check_version_mpcode.txt)
 
 ## [Примеры библиотек](libs_in_mpcode.md)
+- [mpcsymbols](https://github.com/Mister-Wek/mpcsymbols)
+- [mpcmath](https://github.com/Mister-Wek/mpcmath)
