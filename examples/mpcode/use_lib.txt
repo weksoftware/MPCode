@@ -1,0 +1,4 @@
+get_lib [ Mister-Wek/mpcsymbols ]
+use [ mpcsymbols ]
+p [ С новым годом! !se [ снежинка снеговик ] ]
+w
