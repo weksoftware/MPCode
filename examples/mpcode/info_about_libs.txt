@@ -1,0 +1,4 @@
+get_lib [ Mister-Wek/mpcmath ]
+libs_info
+libs_versions
+w
