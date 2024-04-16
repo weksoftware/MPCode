@@ -85,6 +85,7 @@ def uno_list(gruppo):
     return r_list
 
 
+# Получение метадаты и сохранение в файл -------------------------
 def get_meta(url, path='meta_for_get_data.py'):
     r = requests.get(url)
     if r.status_code != '404':
