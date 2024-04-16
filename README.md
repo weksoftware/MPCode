@@ -6,6 +6,17 @@
 [Наш дискорд сервер с другими проектами](https://discord.gg/eKCgfGJWzG)
 [Поддержать нас на бусти](https://boosty.to/weksoftware)
 
+## [Python](https://python.org)
+Версия, на которой разрабатывается: 3.12
+Проверенные версии:
+- 3.12
+- 3.11
+- 3.9
+
+## [Зависимости](requirements.txt)
+- [requests](https://github.com/psf/requests)
+- [colorama](https://github.com/tartley/colorama)
+
 ## [Документация](start_ru.md)
 - [Введение](start_ru.md#введение)
 - [Группы](start_ru.md#группы)
@@ -21,3 +32,5 @@
 - [Использование сторонней библиотеки](examples/mpcode/use_lib.txt)
 - [Вывод информации о библиотеках](examples/mpcode/info_about_libs.txt)
 - [Вывод версии mpcode](examples/mpcode/check_version_mpcode.txt)
+
+## [Примеры библиотек](libs_in_mpcode.md)
