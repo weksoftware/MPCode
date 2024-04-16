@@ -15,3 +15,6 @@
 - [Вывод имени пользователя](examples/mpcode/print_name.txt)
 - [Сумма двух чисел](examples/mpcode/sum.txt)
 - [Использование переменных](examples/mpcode/vars_test.txt)
+- [Использование сторонней библиотеки](examples/mpcode/use_lib.txt)
+- [Вывод информации о библиотеках](examples/mpcode/info_about_libs.txt)
+- [Вывод версии mpcode](examples/mpcode/check_version_mpcode.txt)
