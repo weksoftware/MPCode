@@ -1,0 +1,3 @@
+=variable [ i [ Введите что-нибудь: ] ]
+p [ variable ]
+w
