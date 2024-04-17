@@ -1,0 +1,4 @@
+get_lib [ Mister-Wek/mpcsymbols ]
+use [ ~p s. mpcsymbols ]
+p [ ~ws I t a l \i a , s.s I t a l \i a ! ]
+w
