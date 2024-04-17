@@ -4,7 +4,7 @@
 # /_/  /_/_/   \___/\____/____/___/  
 #
 # MPCode library
-# version 0.0.1
+# version 0.0.2
 # © weksoftware & mrwek, 2024
 # Правообладатель:
 # https://weksoftware.ru/
@@ -18,9 +18,24 @@ import funcs
 
 def mpcode_use(args):
     try:
-        for i in args:
-            exec(f'from libs.{i} import funcs as {i}; main_funcs.update(funcs.add_to_key({i}.funcs, {i}.prefix))')
-            
+        if args[0] == '~prefix' or args[0] == '~p':
+            prefix = args[1]
+            args = args[2:]
+
+            for i in args:
+                exec(f'from libs.{i} import funcs as {i}; main_funcs.update(funcs.add_to_key({i}.funcs, "{prefix}"))')
+
+        elif args[0] == '~only' or args[0] == '~o':
+            lib = args[1]
+            args = args[2:]
+
+            for i in args:
+                exec(f'from libs.{lib}.funcs import {lib}_{i}; main_funcs.update({{"{i}":{lib}_{i}}})')
+
+        else:
+            for i in args:
+                exec(f'from libs.{i} import funcs as {i}; main_funcs.update(funcs.add_to_key({i}.funcs, {i}.prefix))')
+
         return 'success'
     except:
         return 'use error'
