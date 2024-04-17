@@ -4,7 +4,7 @@
 # /_/  /_/_/   \___/\____/____/___/  
 #
 # MPCode library
-# version 0.0.1
+# version 0.0.2
 # © weksoftware & mrwek, 2024
 # Правообладатель:
 # https://weksoftware.ru/
@@ -17,7 +17,7 @@ import sys
 import requests
 import os
 
-version_mpcode = '0.0.1'
+version_mpcode = '0.0.2'
 
 
 def arg_str(args):
@@ -84,8 +84,9 @@ def uno_list(gruppo):
         
     return r_list
 
-
 # Получение метадаты и сохранение в файл -------------------------
+
+
 def get_meta(url, path='meta_for_get_data.py'):
     r = requests.get(url)
     if r.status_code != '404':
@@ -106,7 +107,14 @@ def mpcode_e():
 
 
 def mpcode_p(args):
-    print(' '.join(args))
+
+    space = ' '
+
+    if args[0] == '~ws' or args[0] == '~without_spaces':
+        args = args[1:]
+        space = ''
+
+    print(space.join(args))
     
     return args
 
@@ -225,5 +233,4 @@ def mpcode_version(args=None):
         print(f'In github.com/weksoftware/MPCode current version {r.content.decode("UTF-8")}')
         
         return r.content.decode('UTF-8')
-
 
