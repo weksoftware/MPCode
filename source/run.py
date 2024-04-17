@@ -6,7 +6,7 @@ import colorama
 colorama.init()
 
 while True:
-    print(colorama.Back.BLUE + colorama.Fore.WHITE, end='')
+    print(colorama.Back.GREEN + colorama.Fore.WHITE, end='')
 
     code = input('>>>')
     print(colorama.Back.RESET + colorama.Fore.RESET, end='')
