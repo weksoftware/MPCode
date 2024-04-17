@@ -3,6 +3,8 @@
 
 Основные идеи MPCode - это открытый исходный код и использование языка как конструктора, с возможностью его модификации для любых своих задач.
 
+![banner](https://cloud.weksoftware.ru/imgs/mpcode.png)
+
 [Наш дискорд сервер с другими проектами](https://discord.gg/eKCgfGJWzG)
 [Поддержать нас на бусти](https://boosty.to/weksoftware)
 
