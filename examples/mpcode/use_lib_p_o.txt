@@ -1,0 +1,6 @@
+get_lib [ Mister-Wek/mpcmath ]
+get_lib [ Mister-Wek/mpcsymbols ]
+use [ ~only mpcmath ex ]
+use [ ~prefix s. mpcsymbols ]
+p [ s.e [ утка ] + s.e [ снежинка ] = ex [ 10 + 5 ] ]
+w
