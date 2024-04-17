@@ -1,15 +1,12 @@
-![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![Static Badge](https://img.shields.io/badge/discord-%23151516?logo=discord&logoColor=%23ffffff&labelColor=%235662f6)
-![Static Badge](https://img.shields.io/badge/%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%D1%81-%23ffffff?logo=boosty&logoColor=%23ffffff&labelColor=%23f0642b)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Static Badge](https://img.shields.io/badge/discord-%23151516?logo=discord&logoColor=%23ffffff&labelColor=%235662f6)](https://discord.gg/eKCgfGJWzG)
+[![Static Badge](https://img.shields.io/badge/%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%D1%81-%23ffffff?logo=boosty&logoColor=%23ffffff&labelColor=%23f0642b)](https://boosty.to/weksoftware)
 # MPCode
 > Интерпретируемый язык программирования, написанный на языке Python.
 
 Основные идеи MPCode - это открытый исходный код и использование языка как конструктора, с возможностью его модификации для любых своих задач.
 
 ![banner](https://cloud.weksoftware.ru/imgs/mpcode.png)
-
-[Наш дискорд сервер с другими проектами](https://discord.gg/eKCgfGJWzG)
-[Поддержать нас на бусти](https://boosty.to/weksoftware)
 
 ## [Python](https://python.org)
 Версия, на которой разрабатывается: 3.12\
