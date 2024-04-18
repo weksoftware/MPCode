@@ -39,6 +39,9 @@
 - [Вывод версии mpcode](examples/mpcode/check_version_mpcode.txt)
 - [Аргументы функции p](examples/mpcode/p_arguments.txt)
 - [Аргументы функции use](examples/mpcode/use_lib_p_o.txt)
+- [Цикл fino](examples/mpcode/fino.txt)
+- [Счётчик](examples/mpcode/counter.txt)
+- [Ife](examples/mpcode/ife.txt)
 
 ## [Примеры библиотек](libs_in_mpcode.md)
 - [mpcsymbols](https://github.com/Mister-Wek/mpcsymbols)
