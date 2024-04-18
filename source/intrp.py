@@ -4,7 +4,7 @@
 # /_/  /_/_/   \___/\____/____/___/  
 #
 # MPCode library
-# version 0.0.2
+# version 0.1.0
 # © weksoftware & mrwek, 2024
 # Правообладатель:
 # https://weksoftware.ru/
@@ -41,20 +41,9 @@ def mpcode_use(args):
         return 'use error'
 
 
-main_funcs = {
-    'use': mpcode_use,
-    'b': funcs.mpcode_b,
-    'e': funcs.mpcode_e,
-    'p': funcs.mpcode_p,
-    'i': funcs.mpcode_i,
-    's': funcs.mpcode_s,
-    'm': funcs.mpcode_m,
-    'w': funcs.mpcode_w,
-    'get_lib': funcs.mpcode_get_lib,
-    'libs_info': funcs.mpcode_libs_info,
-    'libs_versions': funcs.mpcode_libs_versions,
-    'version': funcs.mpcode_version
-}
+main_funcs = { 'use': mpcode_use }
+main_funcs.update(funcs.funcs)
+
 
 variables = dict()
 
@@ -143,6 +132,41 @@ def run_func(comands, position):
             'result': variables[comands[position][1:]],
             'end': position + 1
         }
+    
+    elif comands[position] == 'if' and position + 2 <= len(comands) and isinstance(comands[position + 1], list) and isinstance(comands[position + 2], list):
+        if run_list(comands[position + 1])[0] == 'true':
+            return {
+            'result': run_list(comands[position + 2]),
+            'end': position + 2
+            }
+
+        else:
+            return {
+            'result': 'false',
+            'end': position + 2
+            }
+        
+    elif comands[position] == 'ife' and position + 3 <= len(comands) and isinstance(comands[position + 1], list) and isinstance(comands[position + 2], list) and isinstance(comands[position + 3], list):
+        if run_list(comands[position + 1])[0] == 'true':
+            return {
+            'result': run_list(comands[position + 2]),
+            'end': position + 3
+            }
+
+        else:
+            return {
+            'result': run_list(comands[position + 3]),
+            'end': position + 3
+            }
+        
+    elif comands[position] == 'fino' and position + 2 <= len(comands) and isinstance(comands[position + 1], list) and isinstance(comands[position + 2], list):
+        while run_list(comands[position + 1])[0] == 'true':
+            run_list(comands[position + 2])
+        
+        return {
+            'result': 'fino',
+            'end': position + 2
+            }
 
     else:
         if isinstance(comands[position], str) and comands[position] in variables:
