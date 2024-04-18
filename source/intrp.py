@@ -4,7 +4,7 @@
 # /_/  /_/_/   \___/\____/____/___/  
 #
 # MPCode library
-# version 0.1.0
+# version 0.1.1
 # © weksoftware & mrwek, 2024
 # Правообладатель:
 # https://weksoftware.ru/
@@ -79,12 +79,23 @@ def preparare(code):
     blocks = code.split(' ')
     n = 0
 
+    new_blocks = blocks
+
+    while n < len(blocks):
+        if blocks[n] == '/*':
+            e = blocks[n:].index('*/')
+            del new_blocks[n:e + n + 1]
+            n = e
+        n += 1
+
+    blocks = new_blocks
+    n = 0
+
     while n < len(blocks):
         if blocks[n] == '[':
             pre = preparare_gruppo(blocks, n)
             blocks = pre['blocks']
             n = pre['numero']
-            
         n += 1
 
     while None in blocks:
