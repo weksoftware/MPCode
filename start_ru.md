@@ -142,5 +142,5 @@ if [ l [ i = hello ] ] [ p [ Hello! ] ] [ p [ Oh D: ] ]
 
 Пример:
 ```
-fino [ i [ Ввод: ] != exit ] [ p [ введите exit для выхода ] ]
+fino [ l [ i != exit ] ] [ p [ введите exit для выхода ] ]
 ```
