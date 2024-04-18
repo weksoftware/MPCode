@@ -4,7 +4,7 @@
 # /_/  /_/_/   \___/\____/____/___/  
 #
 # MPCode library
-# version 0.1.0
+# version 0.1.1
 # © weksoftware & mrwek, 2024
 # Правообладатель:
 # https://weksoftware.ru/
@@ -17,7 +17,7 @@ import sys
 import requests
 import os
 
-version_mpcode = '0.1.0'
+version_mpcode = '0.1.1'
 
 
 def arg_str(args):
@@ -280,8 +280,18 @@ def mpcode_l(args):
     else:
         return 'false'
     
+    
 def mpcode_line(args):
     return ''.join(args)
+
+
+def mpcode_numero(args):
+    try:
+        float(args[0])
+        return 'true'
+    except:
+        return 'false'
+    
 
 funcs = {
     'b': mpcode_b,
@@ -296,6 +306,7 @@ funcs = {
     'libs_versions': mpcode_libs_versions,
     'version': mpcode_version,
     'l': mpcode_l,
-    'line':mpcode_line
+    'line':mpcode_line,
+    'numero':mpcode_numero
 }
 
