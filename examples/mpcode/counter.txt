@@ -1,0 +1,9 @@
+get_lib [ Mister-Wek/mpcmath ]
+use [ ~o mpcmath ex ]
+=counter [ 0 ]
+fino [ l [ counter < 100 ] ]
+[
+=counter [ ex [ counter + 1 ] ]
+p [ counter ]
+]
+w
