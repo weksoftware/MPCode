@@ -4,7 +4,7 @@
 # /_/  /_/_/   \___/\____/____/___/  
 #
 # MPCode library
-# version 0.0.2
+# version 0.1.0
 # © weksoftware & mrwek, 2024
 # Правообладатель:
 # https://weksoftware.ru/
@@ -17,7 +17,7 @@ import sys
 import requests
 import os
 
-version_mpcode = '0.0.2'
+version_mpcode = '0.1.0'
 
 
 def arg_str(args):
@@ -85,8 +85,6 @@ def uno_list(gruppo):
     return r_list
 
 # Получение метадаты и сохранение в файл -------------------------
-
-
 def get_meta(url, path='meta_for_get_data.py'):
     r = requests.get(url)
     if r.status_code != '404':
@@ -95,6 +93,14 @@ def get_meta(url, path='meta_for_get_data.py'):
         for s in strings:
             f.write(s + '\n')
         f.close()
+
+
+# Проверка строки на возможность конвертации во float ------------
+def str_is_float(s):
+    try:
+        return(float(s))
+    except ValueError:
+        return(s)
 
 
 # MPCODE STANDART FUNCTIONS --------------------------------------
@@ -233,4 +239,63 @@ def mpcode_version(args=None):
         print(f'In github.com/weksoftware/MPCode current version {r.content.decode("UTF-8")}')
         
         return r.content.decode('UTF-8')
+    
+
+def mpcode_l(args):
+
+    if len(args) == 3: # logic update coming soon...
+
+        from intrp import run_list
+
+        operator = args[1]
+        valori = run_list([args[0], args[2]])
+
+        if operator == '=' and str_is_float(valori[0]) == str_is_float(valori[1]):
+            return 'true'
+        
+        elif operator == '!=' and str_is_float(valori[0]) != str_is_float(valori[1]):
+            return 'true'
+        
+        elif operator == '<' and str_is_float(valori[0]) < str_is_float(valori[1]):
+            return 'true'
+        
+        elif operator == '>' and str_is_float(valori[0]) > str_is_float(valori[1]):
+            return 'true'
+        
+        elif operator == '<=' and str_is_float(valori[0]) <= str_is_float(valori[1]):
+            return 'true'
+        
+        elif operator == '>=' and str_is_float(valori[0]) >= str_is_float(valori[1]):
+            return 'true'
+        
+        elif operator == '&' and valori[0] == 'true' and valori[1] == 'true':
+            return 'true'
+        
+        elif operator == '|' and (valori[0] == 'true' or valori[1] == 'true'):
+            return 'true'
+        
+        else:
+            return 'false'
+
+    else:
+        return 'false'
+    
+def mpcode_line(args):
+    return ''.join(args)
+
+funcs = {
+    'b': mpcode_b,
+    'e': mpcode_e,
+    'p': mpcode_p,
+    'i': mpcode_i,
+    's': mpcode_s,
+    'm': mpcode_m,
+    'w': mpcode_w,
+    'get_lib': mpcode_get_lib,
+    'libs_info': mpcode_libs_info,
+    'libs_versions': mpcode_libs_versions,
+    'version': mpcode_version,
+    'l': mpcode_l,
+    'line':mpcode_line
+}
 
