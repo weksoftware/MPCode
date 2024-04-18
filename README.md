@@ -25,6 +25,9 @@
 - [Переменные](start_ru.md#переменные)
 - [Функции](start_ru.md#функции)
 - [Библиотеки](start_ru.md#библиотеки)
+- [Экранирование и аргументы функции p](start_ru.md#экранирование-и-аргументы-функции-p)
+- [Логические операторы и функция l](start_ru.md#логические-операторы-и-функция-l)
+- [If, ife, fino](start_ru.md#if-ife-fino)
 
 ## [Примеры кода](examples/mpcode/)
 - [Hello world!](examples/mpcode/hello_world.txt)
@@ -34,6 +37,8 @@
 - [Использование сторонней библиотеки](examples/mpcode/use_lib.txt)
 - [Вывод информации о библиотеках](examples/mpcode/info_about_libs.txt)
 - [Вывод версии mpcode](examples/mpcode/check_version_mpcode.txt)
+- [Аргументы функции p](examples/mpcode/p_arguments.txt)
+- [Аргументы функции use](examples/mpcode/use_lib_p_o.txt)
 
 ## [Примеры библиотек](libs_in_mpcode.md)
 - [mpcsymbols](https://github.com/Mister-Wek/mpcsymbols)
